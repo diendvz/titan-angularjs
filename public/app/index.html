@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Titan and Angularjs</title>
+    <script src="app/bower/angular/angular.min.js"></script>
+    <script src="app/bower/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controller/indexCtrl.js"></script>
+</head>
+<body ng-app="app" ng-controller="indexCtrl">
+<h1>Xin chào!!!</h1>
+<button ng-click="getListCoders()">Get list coder</button>
+<table>
+    <thead>
+    <td>Name</td>
+    <td>Age</td>
+    </thead>
+    <tbody>
+    <tr ng-repeat="coder in coders">
+        <td>{{coder.name}}</td>
+        <td>{{coder.age}}</td>
+    </tr>
+    </tbody>
+</table>
+<form>
+    <input type="text" placeholder="full name" ng-model="fullName">
+    <br/>
+    <input type="number" step="2" placeholder="age" ng-model="age">
+    <br/>
+    <button ng-click="addCoder()">Add Coder</button>
+</form>
+<input type="text" placeholder="search by name" ng-model="sname">
+<button ng-click="searchCoderByName()">Search</button>
+<br/>
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Age</td>
+    </thead>
+    <tbody>
+        <tr ng-repeat="c in rcoders">
+            <td>{{c.name}}</td>
+            <td>{{c.age}}</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

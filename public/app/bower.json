@@ -1,0 +1,8 @@
+{
+  "name": "diendvz",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.5.7",
+    "angular-ui-router": "0.3.1"
+  }
+}
